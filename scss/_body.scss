@@ -7,26 +7,27 @@ body {
 
 form {
   font-size: 1.5em;
-  margin: 10px 0px;
+  margin: 10px 0;
   width: 100%;
-  input{
+
+  input {
     width: 60px;
   }
+
   button {
     background-color: $button-color;
     border: 3px $button-border solid;
     border-radius: 10px;
     font-size: 0.75em;
     @include heightAndWidth(50px, auto);
-    margin: auto;
-    margin-top: 10px;
+    margin: 10px auto auto;
     position: relative;
   }
 }
 
-
 h1 {
   font-size: 4em;
+  margin-bottom: 5px;
 }
 
 header {
@@ -37,7 +38,19 @@ header {
 label {
   padding-right: 10px;
 }
-.app1, .app2{
+
+p{
+  color: $tertiary-text;
+  margin: 0;
+}
+.answer {
+  display: none;
+  font-size: 1.75em;
+  text-align: center;
+}
+
+.app1,
+.app2 {
   background-color: $secondary-background;
   border: 2px $border solid;
   border-radius: 20px;
@@ -51,6 +64,7 @@ label {
 .app2 {
   grid-area: app2;
 }
+
 .description {
   h2,
   p {
@@ -62,10 +76,6 @@ label {
     font-size: 2em;
     text-align: center;
   }
-
-  p {
-    color: $tertiary-text;
-  }
 }
 
 .wrapper {
@@ -75,4 +85,8 @@ label {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "header header header header" "app1 app1 app2 app2";
   grid-template-rows: auto;
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "app1" "app2";
+}
 }

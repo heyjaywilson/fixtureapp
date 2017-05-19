@@ -11,6 +11,7 @@
 <body class="wrapper">
   <header>
     <h1>ArtNet App</h1>
+    <em><p>This app has all ArtNet subnets and universes starting at 0. If your console is 1 based, please add 1 to all answers.</p></em>
   </header>
   <div class="app1">
     <div class="description">
@@ -22,7 +23,7 @@
         <label for="">Fixture Universe Number</label><input id="fixtUni" type="number" min="0"><br>
         <button type="submit" name="button">Get subnet and universe</button>
       </form>
-      <div id="fixt-answer">
+      <div id="fixt-answer" class="answer">
       </div>
     </div>
   </div>
@@ -32,13 +33,21 @@
       <p>Use this if you know what ArtNet subnet and ArtNet Universe you want the fixture to be on.</p>
     </div>
     <div id="console">
+      <form id = "console-form">
+        <label for="">Artnet subnet</label><input id="sub" type="number" min="0" max="15">
+        <label for="">Artnet universe</label><input id="uni" type="number" min="0" max="15"><br>
+        <button type="submit" name="button">Get Fixture Universe</button>
+      </form>
+      <div id="console-answer" class="answer">
+      </div>
+    </div>
     </div>
   </div>
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <!-- JS Link -->
-  <script src="js/app.js"></script>
+  <script src="js/app-min.js"></script>
 </body>
 
 </html>
