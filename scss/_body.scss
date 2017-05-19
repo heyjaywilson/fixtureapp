@@ -1,0 +1,40 @@
+body{
+  background-color: $primary-background;
+  color: $primary-text;
+  margin: auto;
+  width: 85%;
+}
+h1{
+  font-size: 4em;
+}
+
+header{
+  text-align: center;
+  grid-area: header;
+}
+p{
+  color: $tertiary-text;
+}
+.app1, .app2{
+  color: $secondary-text;
+}
+.app1{
+  grid-area: app1;
+}
+.app2{
+  grid-area: app2;
+}
+.description{
+  h2, p{
+    margin: 0;
+  }
+}
+.wrapper{
+  display: grid;
+  grid-column-gap: 8px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "app1 app1 app2 app2";
+  grid-template-rows: auto;
+}
