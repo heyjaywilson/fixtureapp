@@ -3,33 +3,42 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>ArtNet app</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
   <link rel="stylesheet" href="css/master.css">
 </head>
 
 <body class="wrapper">
   <header>
-    <h1>Fixture App</h1>
+    <h1>ArtNet App</h1>
   </header>
   <div class="app1">
     <div class="description">
       <h2>Using Fixture Universe Number</h2>
-      <p>Use this if you know your fixture's universe number</p>
+      <p>If you know the fixture's universe number, please enter it in the field below. It will be used to calculate the ArtNet subnet and ArtNet universe that the fixture is on.</p>
     </div>
     <div id="fixture">
-
+      <form id = "fixture-form">
+        <label for="">Fixture Universe Number</label><input id="fixtUni" type="number" min="0"><br>
+        <button type="submit" name="button">Get subnet and universe</button>
+      </form>
+      <div id="fixt-answer">
+      </div>
     </div>
   </div>
   <div class="app2">
     <div class="description">
       <h2>Using Fixture Universe Number</h2>
-      <p>Use this if you know your fixture's universe number</p>
+      <p>Use this if you know what ArtNet subnet and ArtNet Universe you want the fixture to be on.</p>
     </div>
-    <div id="fixture">
-
+    <div id="console">
     </div>
   </div>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <!-- JS Link -->
+  <script src="js/app.js"></script>
 </body>
 
 </html>
