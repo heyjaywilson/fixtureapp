@@ -1,18 +1,1 @@
-/* eslint-env jquery*/
-function calculateSU(uni){
-    var subnet = Math.floor(uni/16);
-    var universe = uni - (subnet * 16);
-    return 'ArtNet subnet: ' + subnet + '\nArtNet universe: '+universe;
-}
-
-function renderFixtAnswer(universe, elm){
-    elm.html('<strong>'+calculateSU(universe)+'</strong>');
-}
-$('#fixture-form').submit(function() {
-    event.preventDefault();
-    var fixt = $('#fixtUni').val();
-    $('#fixt-answer').show();
-    renderFixtAnswer(fixt, $('#fixt-answer'));
-});
-
-
+function calculateSU(e){var n=Math.floor(e/16);return"ArtNet subnet: "+n+"\nArtNet universe: "+(e-16*n)}function renderFixtAnswer(e,n){n.html("<strong>"+calculateSU(e)+"</strong>")}function calculateFixtUni(e){var n=16*e[0];return console.log(n),n+=1*e[1],console.log(n),n}function renderSUAnswer(e,n){n.html("Your fixture universe is "+calculateFixtUni(e))}$("#fixture-form").on("click",function(){event.preventDefault();var e=$("#fixtUni").val();$("#fixt-answer").show(),renderFixtAnswer(e,$("#fixt-answer"))}),$("#console-form").submit(function(){event.preventDefault();var e=[];e.push($("#sub").val()),e.push($("#uni").val()),$("#console-answer").show(),renderSUAnswer(e,$("#console-answer"))});
