@@ -3,7 +3,7 @@
 function calculateSU(uni){
     var subnet = Math.floor(uni/16);
     var universe = uni - (subnet * 16);
-    return 'ArtNet subnet: ' + subnet + '\nArtNet universe: '+universe;
+    return 'ArtNet subnet: ' + subnet + '<br>ArtNet universe: '+universe;
 }
 
 function renderFixtAnswer(universe, elm){
@@ -13,18 +13,18 @@ function renderFixtAnswer(universe, elm){
 //All based on artnet sub and uni
 function calculateFixtUni(arr){
     var ans = (arr[0]*16);
-    console.log(ans);
+    // console.log(ans);
     ans += (arr[1]*1);
-    console.log(ans);
+    // console.log(ans);
     return ans;
 }
 
 function renderSUAnswer(fixt, elm){
     //console.log(fixt);
     // console.log(calculateFixtUni(fixt));
-    elm.html('Your fixture universe is '+calculateFixtUni(fixt));
+    elm.html('Fixture universe: <strong>'+calculateFixtUni(fixt)+'</strong>');
 }
-$('#fixture-form').on('click', function() {
+$('#fixture-form').submit(function() {
     event.preventDefault();
     var fixt = $('#fixtUni').val();
     $('#fixt-answer').show();

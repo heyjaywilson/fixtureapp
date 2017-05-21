@@ -9,7 +9,8 @@ form {
   margin: 10px 0;
   width: 100%; }
   form input {
-    width: 60px; }
+    width: 60px;
+    margin: 10px; }
   form button {
     background-color: #bee5a4;
     border: 3px #8cb37c solid;
@@ -37,8 +38,7 @@ p {
 
 .answer {
   display: none;
-  font-size: 1.75em;
-  text-align: center; }
+  font-size: 1.75em; }
 
 .app1,
 .app2 {
@@ -69,7 +69,7 @@ p {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "header header header header" "app1 app1 app2 app2";
   grid-template-rows: auto; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 945px) {
     .wrapper {
       grid-template-columns: 1fr;
       grid-template-areas: "header" "app1" "app2"; } }
