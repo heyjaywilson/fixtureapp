@@ -3,11 +3,11 @@
 function calculateSU(uni){
     var subnet = Math.floor(uni/16);
     var universe = uni - (subnet * 16);
-    return 'ArtNet subnet: ' + subnet + '<br>ArtNet universe: '+universe;
+    return 'ArtNet subnet: <strong>' + subnet + '</strong><br>ArtNet universe: <strong>'+universe+'</strong>';
 }
 
 function renderFixtAnswer(universe, elm){
-    elm.html('<strong>'+calculateSU(universe)+'</strong>');
+    elm.html(calculateSU(universe));
 }
 
 //All based on artnet sub and uni
