@@ -1,95 +1,90 @@
 body {
-  background-color: $primary-background;
-  color: $primary-text;
-  margin: auto;
-  width: 85%;
+    background-color: $primary-background;
+    color: $primary-text;
+    margin: auto;
+    width: 85%;
 }
 
 form {
-  font-size: 1.5em;
-  margin: 10px 0;
-  width: 100%;
+    font-size: 1.5em;
+    margin: 10px 0;
+    width: 100%;
 
-  input {
-    width: 60px;
-    margin: 10px;
-  }
+    input {
+        width: 60px;
+        margin: 10px;
+    }
 
-  button {
-    background-color: $button-color;
-    border: 3px $button-border solid;
-    border-radius: 10px;
-    font-size: 0.75em;
-    @include heightAndWidth(50px, auto);
-    margin: 10px auto auto;
-    position: relative;
-  }
+    button {
+        background-color: $button-color;
+        border: 3px $button-border solid;
+        border-radius: 10px;
+        font-size: 0.75em;
+        @include heightAndWidth(50px, auto);
+        margin: 10px auto auto;
+        position: relative;
+    }
 }
 
 h1 {
-  font-size: 4em;
-  margin-bottom: 5px;
+    font-size: 4em;
+    margin-bottom: 5px;
 }
 
 header {
-  text-align: center;
-  grid-area: header;
+    text-align: center;
+    grid-area: header;
 }
 
 label {
-  padding-right: 10px;
+    padding-right: 10px;
 }
 
 p {
-  color: $tertiary-text;
-  margin: 0;
+    color: $tertiary-text;
+    margin: 0;
 }
 
 .answer {
-  display: none;
-  font-size: 1.75em;
-  //text-align: center;
+    display: none;
+    font-size: 1.75em;
+    //text-align: center;
 }
 
 .app1,
 .app2 {
-  background-color: $secondary-background;
-  border: 2px $border solid;
-  border-radius: 20px;
-  padding: 10px;
+    background-color: $secondary-background;
+    border: 2px $border solid;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .app1 {
-  grid-area: app1;
+    grid-area: app1;
 }
 
 .app2 {
-  grid-area: app2;
+    grid-area: app2;
 }
 
 .description {
-  h2,
-  p {
-    margin: 5px;
-  }
+    h2,
+    p {
+        margin: 5px;
+    }
 
-  h2 {
-    color: $secondary-text;
-    font-size: 2em;
-    text-align: center;
-  }
+    h2 {
+        color: $secondary-text;
+        font-size: 2em;
+        text-align: center;
+    }
 }
 
 .wrapper {
-  display: grid;
-  grid-column-gap: 8px;
-  grid-row-gap: 16px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "header header header header" "app1 app1 app2 app2";
-  grid-template-rows: auto;
-}
-@media only screen and (max-width: 945px) {
-    .wrapper
-  {grid-template-columns: 1fr;
-  grid-template-areas: "header" "app1" "app2";}
+    display: grid;
+    grid-column-gap: 8px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header" "app1 app1 app2 app2";
+    grid-template-rows: auto;
 }

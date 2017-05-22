@@ -1,0 +1,6 @@
+@media only screen and (max-width: 945px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "app1" "app2";
+    }
+}
