@@ -2,7 +2,7 @@
 //ALL  BASED ON FIXTURE UNIVERSE
 function calculateSU(uni){
     var subnet = Math.floor(uni/16);
-    var universe = uni - (subnet * 16);
+    var universe = uni - (subnet * 16)-1;
     return 'ArtNet subnet: <strong>' + subnet + '</strong><br>ArtNet universe: <strong>'+universe+'</strong>';
 }
 
