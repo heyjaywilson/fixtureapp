@@ -14,7 +14,7 @@ function renderFixtAnswer(universe, elm){
 function calculateFixtUni(arr){
     var ans = (arr[0]*16);
     // console.log(ans);
-    ans += (arr[1]*1);
+    ans += (arr[1] + 1);
     // console.log(ans);
     return ans;
 }
