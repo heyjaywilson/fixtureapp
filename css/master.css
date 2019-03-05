@@ -50,9 +50,6 @@ p {
 .app1 {
   grid-area: app1; }
 
-.app2 {
-  grid-area: app2; }
-
 .description h2,
 .description p {
   margin: 5px; }
@@ -67,10 +64,10 @@ p {
   grid-column-gap: 8px;
   grid-row-gap: 16px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "header header header header" "app1 app1 app2 app2";
+  grid-template-areas: "header header header header" "app1 app1 app1 app1";
   grid-template-rows: auto; }
 
 @media only screen and (max-width: 945px) {
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "app1" "app2"; } }
+    grid-template-areas: "header" "app1"; } }
